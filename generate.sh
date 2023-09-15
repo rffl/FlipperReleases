@@ -20,16 +20,16 @@ pushd flipper
 git init && git add . && git commit -m "Original source"
 
 
-git remote add flipperUpstream https://github.com/facebook/flipper
-git fetch flipperUpstream pull/3553/head:universalBuild
+git remote add flipperUpstream https://github.com/markholland/flipper.git
+git fetch flipperUpstream m1-universal
 
 git cherry-pick --keep-redundant-commits \
-6cc083b860bb156592dfc622174e6f8d780a6b97 \
-2216a3f94db296290b855f036c80a6643d20e884 \
-1e1cc37c3bff012f6b9f8c376baeb4675f6dfa29 \
-b26997af00b3779dc8fc65e889b87312ae21fea5 \
-bd477678bc7698b16339aa7f8957f29811cbb0ab \
-ed6e15edc8bd4e4c496088d76e46aeea724a4375 
+e4039306d0819f7b3668fb2a9a4a581ce5dc1bab \
+a87d3ccc9c19c26bcfe99e154b0aae1d05ba95d9 \
+52d78d94528a1dc8d607fb735e02a9df0480008b \
+420f53802558bfa49d13ba5c96cf33d5b7392fc2 \
+b10207f9bdf9eeb0bd08534cc5a64c6f9cec7597 \
+6768711253d080a2509b81b963c885327337b34f 
 
 pushd desktop
 if grep -Fxq "@electron/universal" package.json
