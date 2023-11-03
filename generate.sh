@@ -20,7 +20,7 @@ pushd flipper
 git init && git add . && git commit -m "Original source"
 
 
-git remote add flipperUpstream https://github.com/markholland/flipper.git
+git remote add flipperUpstream https://github.com/rffl/flipper.git
 git fetch flipperUpstream m1-universal
 
 git cherry-pick --keep-redundant-commits \
